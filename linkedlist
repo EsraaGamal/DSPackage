@@ -1,0 +1,159 @@
+#include<iostream>
+using namespace std;
+template <class s>
+class node
+{
+	public:
+	s value;                   
+	node* next;             
+
+	node();
+	node(data);      
+};
+
+
+template<s>
+class linkedlist
+{
+	node<s> head,tail;
+	int elementscount;        
+public:
+	linkedlist();
+	void insertelements(int index,t value);
+	void append ();
+	void clear();
+s removear(int index);
+	int size();     
+	void print();
+
+
+};
+
+
+
+
+
+int main()
+{
+}
+
+
+
+template<s>
+node<s>::node()
+{
+	next=0;
+}
+template<s>
+node<s>::node(data)
+{
+	value=data;
+	next=0;
+}
+
+template<s>
+linkedlist<s>::linkedlist()
+{
+	head=tail=elementscount=0;
+}
+
+
+template<s>
+linkedlist<s>::insertelements(int index,t value)
+{
+	assert((index>=0)&&(index<elementscount))
+		node<s>=new node<s>(val);
+	if(index==0)
+	{
+		if(empty())
+			append(val);
+	
+	else
+	{
+		inserted->next=head;
+		head=inserted;
+
+	}
+	}
+	else
+	{
+		node<s> *temp=head;
+		for(int i=0;i<index-1;i++)
+			temp=temp->next;
+		insertes->next=temp->next;
+		temp->next=inserted;
+	}
+	++elementscount;
+}
+
+
+
+template<s>
+linkedlist<s>::append()
+{
+	node<s> *inserted = new node<s> (val);
+	if(empty())
+		head=tail=inserted;
+	else
+	{
+		tail->next=inserted;
+		tail=inserted;
+
+	}
+	++elementscount;
+}
+
+
+
+
+template<s>
+linkedlist<s>::clear()
+{
+	while(!empty())
+		removeat(0);
+}
+
+template<s>
+s linkedlist<s>::removeat(int index)
+{
+	assert((index>=0)&&(index<elementscount))
+		node<s> *deleted;
+	t val;
+
+	if(index==0)
+	{
+		deleted=head;
+		val=deleted->value;
+		head=head->next;
+	}
+	else
+	{
+		node<s> *temp=head;
+		for(int i=0;i<index-1;i++)
+			temp=temp->next;
+		deleted=temp->next;
+		temp->next=deleted->next;
+		val=deleted->value;
+	}
+	delete deleted;
+	--elementscount;
+	if(elementscount==0)
+		head=tail=null;
+	return val;
+	
+}
+
+
+template<s>
+linkedlist<s>::size()
+{
+	return elementscount;
+}
+
+
+template<s>
+linkedlist<s>::print()
+{
+	for(int i=0;i<size();i++)
+		cout<<at(i);
+}
